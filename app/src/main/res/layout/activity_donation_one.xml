@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="donationOneVM" type="com.moeezasapplication.app.modules.donationone.data.viewmodel.DonationOneVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearDonationOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylered_50">
+
+        <LinearLayout android:id="@+id/linearTopbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageMenu"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="@dimen/_28pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_menu"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
+            <ImageView android:id="@+id/imageNotification"
+                android:layout_height="@dimen/_25pxh"
+                android:layout_marginStart="@dimen/_244pxh"
+                android:layout_width="@dimen/_22pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_notification"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_notification"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowclothdonation"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_34pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClothDonation"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.67" android:layout_width="0dp"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:singleLine="true"
+                android:text="@{donationOneVM.donationOneModel.txtClothDonation}"
+                style="@style/txtGilroybold24" tools:text="@string/lbl_cloth_donation"/>
+            <LinearLayout android:id="@+id/linearRowplussquare"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4pxv"
+                android:layout_marginStart="@dimen/_50pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_weight="0.33" android:layout_width="0dp" android:orientation="horizontal">
+                <ImageView android:id="@+id/imagePlussquare"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_plussquare"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_plussquare"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDonate"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_11pxh"
+                    android:layout_weight="0.76"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@{donationOneVM.donationOneModel.txtDonate}"
+                    style="@style/txtGilroysemibold16_1" tools:text="@string/lbl_donate"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtFrame246"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_64pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_5pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@{donationOneVM.donationOneModel.txtFrame246}"
+            style="@style/txtSolid" tools:text="@string/lbl_my_donations"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerDonationOne"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_20pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_20pxh}" tools:itemCount="2" tools:listitem="@layout/row_donation_one"/>
+        <FrameLayout android:id="@+id/frameStackvolume"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_29pxv"
+            android:layout_marginBottom="@dimen/_44pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_273pxv" android:layout_width="@dimen/_312pxh">
+            <LinearLayout android:id="@+id/linearRowvolume"
+                android:layout_gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_63pxh"
+                android:layout_marginStart="@dimen/_63pxh"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageVolume"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_width="@dimen/_23pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_volume"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_volume"/>
+                <ImageView android:id="@+id/imageLocation"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_51pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_location"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_location"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowuser"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1pxv"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearRowhome"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.88"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageHome"
+                        android:layout_height="@dimen/_28pxh"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_width="@dimen/_25pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_home"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_home"/>
+                    <ImageView android:id="@+id/imageLocationOne"
+                        android:layout_height="@dimen/_25pxh"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_47pxh"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_width="@dimen/_25pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_location_black_900"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_location_black_900"/>
+                    <ImageView android:id="@+id/imageVolumeOne"
+                        android:layout_height="@dimen/_28pxh"
+                        android:layout_marginStart="@dimen/_46pxh"
+                        android:layout_width="@dimen/_23pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_volume"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_volume"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageUser"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_121pxh"
+                    android:layout_width="@dimen/_23pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

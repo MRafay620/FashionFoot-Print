@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="landingPageVM" type="com.moeezasapplication.app.modules.landingpage.data.viewmodel.LandingPageVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearLandingpage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylepink_50">
+        <FrameLayout android:gravity="start"
+            android:id="@+id/frameStackmyprojectone"
+            android:layout_height="@dimen/_481pxv" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageMyprojectOne"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_481pxh"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_myproject1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_myproject1"/>
+        </FrameLayout>
+        <TextView android:gravity="start"
+            android:id="@+id/txtFashionFootpri"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_27pxh"
+            android:layout_marginStart="@dimen/_27pxh"
+            android:layout_width="match_parent"
+            android:text="@{landingPageVM.landingPageModel.txtFashionFootpri}"
+            style="@style/txtInterbold54" tools:text="@string/msg_fashion_footpri"/>
+        <TextView android:gravity="start"
+            android:id="@+id/txtYouronestops"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_27pxh"
+            android:layout_marginStart="@dimen/_27pxh"
+            android:layout_marginTop="@dimen/_6pxv"
+            android:layout_width="match_parent"
+            android:text="@{landingPageVM.landingPageModel.txtYouronestops}"
+            style="@style/txtIntermedium14" tools:text="@string/msg_your_one_stop_s"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnGetStarted"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_57pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_27pxh"
+            android:layout_marginStart="@dimen/_27pxh"
+            android:layout_marginTop="@dimen/_44pxv"
+            android:layout_width="@dimen/_259pxh"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_get_started"
+            android:textAllCaps="false" style="@style/btnSolidRounded_1" tools:text="@string/lbl_get_started"/>
+    </LinearLayout>
+</layout>

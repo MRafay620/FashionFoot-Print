@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="donationSixVM" type="com.moeezasapplication.app.modules.donationsix.data.viewmodel.DonationSixVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearDonationSix"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylered_50">
+
+        <ImageView android:id="@+id/imageArrowleft"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_12pxh"
+            android:layout_marginEnd="@dimen/_41pxh"
+            android:layout_marginStart="@dimen/_41pxh"
+            android:layout_marginTop="@dimen/_29pxv"
+            android:layout_width="@dimen/_6pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft_black_900"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft_black_900"/>
+        <ImageView android:id="@+id/imageArrowup"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_99pxh"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_124pxv"
+            android:layout_width="@dimen/_134pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowup"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowup"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtHurrayYoujus"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_10pxh"
+            android:text="@{donationSixVM.donationSixModel.txtHurrayYoujus}"
+            style="@style/txtGilroybold20_1" tools:text="@string/msg_hurray_you_jus"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtYourdonatedit"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_10pxh"
+            android:text="@{donationSixVM.donationSixModel.txtYourdonatedit}"
+            style="@style/txtGilroyregular16_2" tools:text="@string/msg_your_donated_it"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnYouAreWelcomeOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_48pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_25pxv"
+            android:layout_width="@dimen/_213pxh"
+            android:lineSpacingExtra="@dimen/_4pxh"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv" android:singleLine="true"
+            android:text="@string/msg_you_are_welcome"
+            android:textAllCaps="false" style="@style/btnSolidRounded_5" tools:text="@string/msg_you_are_welcome"/>
+    </LinearLayout>
+</layout>

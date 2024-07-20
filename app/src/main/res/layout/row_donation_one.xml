@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="donationOneRowModel" type="com.moeezasapplication.app.modules.donationone.data.model.DonationOneRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowrectangle335"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageRectangle335"
+            android:layout_height="@dimen/_80pxh"
+            android:layout_width="@dimen/_76pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_12pxh}"
+            imageRes="@{@drawable/img_rectangle335}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle335"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumngenericdonatin"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_13pxv"
+            android:layout_marginEnd="@dimen/_98pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_23pxv"
+            android:layout_weight="0.63" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtGenericDonatin"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@{donationOneRowModel.txtGenericDonatin}"
+                style="@style/txtGilroybold16_2" tools:text="@string/msg_generic_donatin"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowclock"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageClock"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_clock_indigo_a400"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_clock_indigo_a400"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{donationOneRowModel.txtTime}"
+                    style="@style/txtGilroybold10" tools:text="@string/lbl_3_mins_ago"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

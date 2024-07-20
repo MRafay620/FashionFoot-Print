@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSliderpartywearModel" type="com.moeezasapplication.app.modules.home.data.model.ImageSliderSliderpartywearModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowpartywear"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStyleblue_51cornerRadius">
+        <ImageView android:id="@+id/imageImageTwenty"
+            android:layout_height="@dimen/_151pxh"
+            android:layout_width="@dimen/_157pxh"
+            android:scaleType="fitXY"
+            imageUrl="@{imageSliderSliderpartywearModel.imageImageTwenty}"
+            placeHolder="@{@drawable/image_not_found}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image20"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPartyWear"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_66pxv"
+            android:layout_marginEnd="@dimen/_36pxh"
+            android:layout_marginStart="@dimen/_1pxh"
+            android:layout_marginTop="@dimen/_55pxv"
+            android:layout_weight="0.46" android:layout_width="0dp"
+            android:lineSpacingExtra="@dimen/_5pxh"
+            android:singleLine="true"
+            android:text="@{imageSliderSliderpartywearModel.txtPartyWear}"
+            style="@style/txtSenbold24" tools:text="@string/lbl_party_wear"/>
+    </LinearLayout>
+</layout>

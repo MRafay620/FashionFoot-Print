@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="closetVM" type="com.moeezasapplication.app.modules.closet.data.viewmodel.ClosetVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameCloset"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylepink_50">
+        <LinearLayout android:id="@+id/linearColumnleftside"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_6pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_12pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_19pxh"
+                android:layout_marginStart="@dimen/_19pxh"
+                android:layout_marginTop="@dimen/_27pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_white_a700_border_white_a700_radius_12"
+                    android:id="@+id/btnArrowleft"
+                    android:layout_height="@dimen/_41pxh"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_width="@dimen/_41pxh"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_arrowleft" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMyCloset"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_57pxh"
+                    android:layout_marginTop="@dimen/_5pxv"
+                    android:layout_weight="0.78"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{closetVM.closetModel.txtMyCloset}"
+                    style="@style/txtInterbold30" tools:text="@string/lbl_my_closet"/>
+            </LinearLayout>
+            <ImageView android:gravity="start"
+                android:id="@+id/imageIMG47771"
+                android:layout_height="@dimen/_306pxv"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY" cornerRadius="@{@dimen/_3pxh}"
+                imageRes="@{@drawable/img_img47771}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_img47771"/>
+            <ImageView android:id="@+id/imageRectangle175"
+                android:layout_gravity="end"
+                android:layout_height="@dimen/_162pxh"
+                android:layout_marginEnd="@dimen/_17pxh"
+                android:layout_marginStart="@dimen/_17pxh"
+                android:layout_marginTop="@dimen/_37pxv"
+                android:layout_width="@dimen/_116pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_rectangle3}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle3"/>
+
+            <ImageView
+                android:id="@+id/imageRectangle175One"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_rectangle5}"
+                android:layout_width="@dimen/_152pxh"
+                android:layout_height="@dimen/_190pxh"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/_201pxh"
+                android:layout_marginEnd="@dimen/_9pxh"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_rectangle5" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

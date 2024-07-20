@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="welcomeVM" type="com.moeezasapplication.app.modules.welcome.data.viewmodel.WelcomeVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearWelcome"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylered_50">
+        <FrameLayout android:gravity="start"
+            android:id="@+id/frameStackstatusbar"
+            android:layout_height="@dimen/_500pxv" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageStatusbar"
+                android:layout_gravity="top|center"
+                android:layout_height="@dimen/_21pxh"
+                android:layout_marginBottom="@dimen/_12pxv"
+                android:layout_marginEnd="@dimen/_14pxh"
+                android:layout_marginStart="@dimen/_14pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="@dimen/_340pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_statusbar"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_statusbar"/>
+            <FrameLayout android:id="@+id/frameStackellipseone"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_500pxv" android:layout_width="match_parent">
+                <ImageView android:id="@+id/imageEllipseOne"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_ellipse1}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1"/>
+                <LinearLayout android:id="@+id/linearColumnwelcometo"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_66pxv"
+                    android:layout_marginEnd="@dimen/_65pxh"
+                    android:layout_marginStart="@dimen/_65pxh"
+                    android:layout_marginTop="@dimen/_66pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtWelcometo"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_23pxh"
+                        android:layout_marginStart="@dimen/_23pxh"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{welcomeVM.welcomeModel.txtWelcometo}"
+                        style="@style/txtPoppinslight32" tools:text="@string/lbl_welcome_to"/>
+                    <TextView android:gravity="start"
+                        android:id="@+id/txtFashionFootpri"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2pxv"
+                        android:layout_width="match_parent"
+                        android:text="@{welcomeVM.welcomeModel.txtFashionFootpri}"
+                        style="@style/txtInterbold54" tools:text="@string/msg_fashion_footpri"/>
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtLetsBeginYou"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_57pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{welcomeVM.welcomeModel.txtLetsBeginYou}"
+            style="@style/txtPoppinslight16" tools:text="@string/msg_let_s_begin_you"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnLogin"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_login" android:textAllCaps="false"
+            style="@style/btnSolidRounded_2" tools:text="@string/lbl_login"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnRegister"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_register"
+            android:textAllCaps="false"
+            style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_register"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtContinueasag"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_28pxv"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_47pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{welcomeVM.welcomeModel.txtContinueasag}"
+            style="@style/txtUrbanistromanbold15" textUnderline="true" tools:text="@string/msg_continue_as_a_g"/>
+    </LinearLayout>
+</layout>

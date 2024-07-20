@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="otpVerificationVM" type="com.moeezasapplication.app.modules.otpverification.data.viewmodel.OtpVerificationVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearOTPVerificatio"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylepink_50">
+
+        <ImageButton
+            android:background="@drawable/rectangle_bg_white_a700_border_white_a700_radius_12"
+            android:id="@+id/btnArrowleft"
+            android:layout_height="@dimen/_41pxh"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_23pxv"
+            android:layout_width="@dimen/_41pxh"
+            android:paddingHorizontal="@dimen/_13pxh"
+            android:paddingVertical="@dimen/_13pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_arrowleft" tools:ignore="ContentDescription"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtWelcomebackG"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_22pxh"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_28pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{otpVerificationVM.otpVerificationModel.txtWelcomebackG}"
+            style="@style/txtUrbanistromanbold30" tools:text="@string/msg_otp_verificatio"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtEntertheverif"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:layout_width="match_parent"
+            android:text="@{otpVerificationVM.otpVerificationModel.txtEntertheverif}"
+            style="@style/txtUrbanistromanmedium16_1" tools:text="@string/msg_enter_the_verif"/>
+        <com.mukesh.OtpView android:focusableInTouchMode="true"
+            android:id="@+id/otpViewOtpview" android:inputType="number"
+            android:itemBackground="@color/white_A700"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_33pxv"
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray_901"
+            android:textSize="@dimen/_22pxh" app:OtpItemCount="4"
+            app:OtpItemHeight="@dimen/_60pxv"
+            app:OtpItemSpacing="@dimen/_17pxh"
+            app:OtpItemWidth="@dimen/_70pxh"
+            app:OtpLineColor="@color/indigo_50" app:OtpViewType="rectangle"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnVerify"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_19pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_19pxv" android:singleLine="true"
+            android:text="@string/lbl_verify"
+            android:textAllCaps="false" style="@style/btnSolidRounded_3" tools:text="@string/lbl_verify"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtDidntreceived"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_25pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_355pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{otpVerificationVM.otpVerificationModel.txtDidntreceived}"
+            style="@style/txtPoppinssemibold15_1" tools:text="@string/msg_didn_t_received"/>
+    </LinearLayout>
+</layout>
